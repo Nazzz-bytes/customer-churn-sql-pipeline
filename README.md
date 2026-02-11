@@ -56,8 +56,6 @@ Otherwise:
 •	churned = 0 (active)
 
 
-
-
 STEP 4: Final ML Dataset (final_churn_dataset)
 Joined:
 •	customer_features
@@ -72,3 +70,23 @@ This dataset is ready for:
 •	Dashboarding
 
 
+## Data Pipeline Diagram
+
+```mermaid
+flowchart TD
+
+A[customers table]
+B[usage_logs table]
+C[payments table]
+
+D[customer_features\nFeature Engineering]
+E[churn_labels\nChurn Logic 30-Day Rule]
+F[final_churn_dataset\nML Ready Dataset]
+G[Export to CSV]
+
+A --> D
+B --> D
+C --> D
+D --> F
+E --> F
+F --> G
