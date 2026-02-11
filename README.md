@@ -15,10 +15,12 @@ The project uses three primary raw tables:
 - customer_id (Primary Key)
 - signup_date
 - plan_type
+
 2.usage_logs
 - usage_id
 - customer_id (Foreign Key)
 - usage_date
+
 3.payments
 - payment_id
 - customer_id (Foreign Key)
